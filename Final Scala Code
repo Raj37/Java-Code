@@ -1,0 +1,181 @@
+import java.io.BufferedReader
+import java.io.FileNotFoundException
+import java.io.FileReader
+import java.io.IOException
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.List;
+import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.pipeline.Annotation;
+import edu.stanford.nlp.pipeline.StanfordCoreNLP;
+import edu.stanford.nlp.sentiment.SentimentCoreAnnotations;
+import edu.stanford.nlp.util.CoreMap;
+import edu.stanford.nlp.util.PropertiesUtils;
+import scala.collection.JavaConversions._
+
+class SentimentTest {
+  var text: String = null;
+  val NEW_LINE_SEPARATOR: String = "\n";
+
+  def sentimentResult(n: Int, str: String, output: String) {
+    try {
+      var rowNo: Int = n;
+      var text: String = str;
+      var result: String = custSentiment(text);
+      val splChrs: String = "-./@#$%^&_+=()";
+      var found: Boolean = result.matches("[" + splChrs + "]+");
+      var outputFile: String = output;
+      val destinationCSVFile: String = "C:\\Users\\rajka\\csv\\" + outputFile;
+      //FileWriter fstream = new FileWriter(destinationCSVFile, true);
+      var fstream: FileWriter = new FileWriter(destinationCSVFile, true);
+      //BufferedWriter out = null;
+      var out: BufferedWriter = null;
+      out = new BufferedWriter(fstream);
+      if (result.equals("")) {
+        var fstring1: String = rowNo + "|" + "Empty Line" + "|" + "-99999";
+        out.write(fstring1);
+        println(fstring1);
+        out.append(NEW_LINE_SEPARATOR);
+        out.flush();
+        println("*** Also wrote this information to file1: "
+          + destinationCSVFile);
+      } else if (found == true) {
+        var fstring1: String = rowNo + "|" + text + "|" + "-99999";
+        out.write(fstring1);
+        println(fstring1);
+        out.append(NEW_LINE_SEPARATOR);
+        out.flush();
+        println("*** Also wrote this information to file1: "
+          + destinationCSVFile);
+      } else {
+        var fstring: String = rowNo + "|" + text + "|" + result;
+        out.write(fstring);
+        out.append(NEW_LINE_SEPARATOR);
+        out.flush();
+        println("*** Also wrote this information to file: "
+          + destinationCSVFile);
+      }
+    } catch {
+      case e: Exception =>
+        e.printStackTrace()
+        System.out.println(e);
+    }
+  }
+  def custSentiment(str: String): String = {
+    val splChrs: String = "-./@#$%^&_+=()";
+    text = str;
+    var found: Boolean = text.matches("[" + splChrs + "]+");
+    if (text.equals("")) {
+      return "";
+    } else if (found == true) {
+      return text;
+    } else {
+      //StanfordCoreNLP pipeline = new StanfordCoreNLP(
+      var pipeline: StanfordCoreNLP = new StanfordCoreNLP(
+        PropertiesUtils
+          .asProperties(
+            "annotators",
+            "tokenize,cleanxml,ssplit,regexner,truecase,pos,lemma,ner,gender,parse,sentiment",
+            "ssplit.isOneSentence",
+            "true",
+            "parse.model",
+            "edu/stanford/nlp/models/srparser/englishSR.ser.gz",
+            "tokenize.language", "en"));
+
+      //Annotation annotation = pipeline.process(text);
+      var annotation: Annotation = pipeline.process(text);
+      //List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
+      var sentences: List[CoreMap] = annotation.get(classOf[CoreAnnotations.SentencesAnnotation])
+      for (sentence:CoreMap <- sentences) {
+        var sentiment: String = sentence
+          .get(classOf[SentimentCoreAnnotations.SentimentClass]);
+        if (sentiment.equalsIgnoreCase("Very Negative")) {
+          // score = score - 2;
+          // System.out.println(sentiment);
+          return sentiment;
+        } else if (sentiment.equalsIgnoreCase("Negative")) {
+          // score = score - 1;
+          // System.out.println(sentiment);
+          return sentiment;
+        } else if (sentiment.equalsIgnoreCase("Positive")) {
+          // score = score + 1;
+          // System.out.println(sentiment);
+          return sentiment;
+        } else if (sentiment.equalsIgnoreCase("Very Positive")) {
+          // score = score + 2;
+          // System.out.println(sentiment);
+          return sentiment;
+        } else if (sentiment.equalsIgnoreCase("Neutral")) {
+          // score = score + 0;
+          // System.out.println(sentiment);
+          return sentiment;
+        }
+      }
+    }
+    return str;
+  }
+}
+
+object CsvFileReaderExample {
+
+  def main(args: Array[String]): Unit = {
+    if (args.length != 2) {
+      System.err.println("Please specify input and output file names")
+      System.exit(-1)
+    }
+    val input: String = args(0)
+    val output: String = args(1)
+    val csvFile: String = "C:\\Users\\rajka\\csv\\" + input
+    var br: BufferedReader = null
+    var line: String = " "
+    try {
+      br = new BufferedReader(new FileReader(csvFile))
+      var n: Int = 0
+      while ({line = br.readLine();  line!= null}) if (line.trim().length == 0) {
+        println(line.trim().length)
+        n = n + 1
+        println("Line No : " + n)
+        val text: String = line
+        println("Text" + text)
+        //val obj: CsvFileReaderExample = new CsvFileReaderExample()
+        val obj: SentimentTest = new SentimentTest()
+        obj.sentimentResult(n, text, output)
+      } else {
+        val splChrs: String = "-./@#$%^&_+=()"
+        val found: Boolean = line.matches("[" + splChrs + "]+")
+        println("value of found:" + found)
+        if (found == true) {
+          n = n + 1
+          println("Line No : " + n)
+          val text: String = line
+          println("Text" + text)
+          //val obj: CsvFileReaderExample = new CsvFileReaderExample()
+          val obj: SentimentTest = new SentimentTest()
+          obj.sentimentResult(n, text, output)
+        } else {
+          n = n + 1
+          println("Line No : " + n)
+          val text: String = line
+          println("Text" + text)
+          // val obj: CsvFileReaderExample = new CsvFileReaderExample()
+          val obj: SentimentTest = new SentimentTest()
+          obj.sentimentResult(n, text, output)
+        }
+      }
+    } catch {
+      case e: FileNotFoundException => e.printStackTrace()
+
+      case e: IOException => e.printStackTrace()
+      
+      case e: NullPointerException => e.printStackTrace()
+
+    } finally if (br != null) {
+      try br.close()
+      catch {
+        case e: IOException => e.printStackTrace()
+
+      }
+    }
+  }
+
+}
