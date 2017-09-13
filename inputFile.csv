@@ -1,0 +1,93 @@
+Make sure people get enough training and experience in the field before being assigned to a bigger client.
+Establish out-of-the-box solutions that don't require special work and establish customer need for managing touch points.
+
+"Notes/Comments/Questions for DR (updated: 04/19/2017)   Operational challenges:  Airwatch add-on product launch (march 24th):  •	DR modified the SKU setups in Production which is of high risk   •	Missing content updates/prices during SKU setup   •	Not notifying us before making the SKU setups in Prod and not letting us know what they did for the SKU setups   •	Not QAign the changes after modifying the SKU setups   •	We immediately figured it out, fixed it and deployed the changes.  Feedback on DR tickets (Fridays):  •	We are asked on Fridays what the priorities are for the next week. We send the info but during calls the topics are mentioned but no confirmations are given. Mostly it is mentioned ‘we will look into it’. If purpose of Fridays email is to align priorities and sent prior to meeting it would be great to receive ETAs and confirmations during the Tuesday call.    Communication is not clear:  •	QB#1269: When tickets or work is done by DR notes are added that ‘work is done’ but no confirmation on how to look at the work is given. DR assumes that VMware will know how to view changes. We do know how to look at changes but a proactive message should be added to inform team on the steps to take on all work (to avoid extra questions).    •	QB#1271: Example of a ticket were we just receive this confirmation ‘This work has been completed’ and this is a Japanese issue that was fixed. No proof of work is given and no real confirmation is given to check. It's difficult sometimes to check without any clear confirmation of the work done.  The words ‘This work has been completed’ are not enough sometimes.   Proof of work is not given to VMware:  •	VMware as client should receive proof of the work being done by DR, also screenshot confirmations are expected by VMware but we do not receive that from DR. We acknowledge that this takes time but many times it is very helpful.    QA process from DR is not clear:  •	DR mentions that QA has been done but many times errors are still without fix. Without proof of work, screenshots of work done or DR’s QA VMware cannot confirm formally the work from DR.   Examples:   QB#1210: Bundle Deal Capability work was confirmed by DR as complete but the bundle capability only works on the US store, the rest of stores have important layout issues that prevent us from launching globally. Also the work does not work on upgrade products and it appears that DR did not have this in scope.   QB#1245: No proof of work is given and we have reported issues.   It would be great to receive proof of work to use this as base for the check that we do on our side next.  Test stores are left without alignment with production:  •	A project was started on VMWTST (QB#1152) but the last edits were made directly in production and because of this the testing sites are not aligned with production and this is risky. We look forward to confirmation on ETA for this pending alignment.   Presentation and layout issues on work presented to VMware:  •	Solutions are provided to VMware but the layout or design is not taken into account so when the work is presented to VMware we have to provide many comments about the solution looking with weird layout of the elements which does not look professional. Examples: QB#1210, QB#1269.   QA from DR:  •	It would be interesting for VMware to understand better the QA process that DR follows to check our work. Is it a dedicated team or different people than the PM or developer that are looking at the final work to check it or is the PM and developer the same ones that assign, develop, implement and QA the work? If the same people that assign, develop & implement work are the ones checking it there is a big risk of overlooking items and we have this happening regularly.   Response time and DR teams:  •	We want to confirm if Joe, Scott and Ryan (our main contacts) are responsible for the all following categories of issues or if we have to engage with separate DR teams on the following topics:  - Issue could be on Global eStores   - Partner related issues   - Online Renewals   - Support issues   - My Learn Issues   - EBS issues   - Functionality implementation/Projects      "
+Keep making improvements to the platform that makes sense for gaming clients. 
+less downtime, reduce cost
+Reporting is down too often, data is often missing, and it needs to be more reliable consistent.
+Response #1: Be aligned with the ecommerce evolution and be ambitious Response #2: invest money in developing your services
+Nothing at this point
+We had to do a lot of customization to accommodate configure-to-order subscriptions. If a company has a need for configure-to-order subscriptions, then they need to be aware of this.
+Decrease cycle times for requested changes, particularly to the Global Commerce platform.  Be more open and honest about what capabilities you have or don't have regarding subscription products, for example to execute promotions.  Get mForce and GC to interact and cooperate more closely together as an integrated offering rather than two discrete unit.
+Proactive focus on performance optimization and drive product/partnership innovation
+Be faster in terms of delivery but also platform. More flexibility and drive.
+Continued focus on delivering excellence - always looking at driving value for customers.
+Better access/review of data 
+Focus on having basic feature set available
+either increase priority to the account or take fewer accounts.
+Share more industry trends and proactively suggest activities/changes to drive incremental revenue.
+Continued partnership and support with costs.
+
+Be proactive, propose new stuff, energize your team.    A very special thanks to the Demand Generation guys who made a TREMENDOUS job!
+We need to reduce complexity, occasionally to complex in communications and in operations and to many rounds in communication
+customer support   order handling process and service  
+
+
+Be more serious and add more people to handle accounts. Having people that manage two accounts at once make the client pay the consequences with slow work, incomplete work, poor communication, low quality of work/design/layout, etc.  
+We would need commerce API instead of a hosted commerce experience to support our global expansion and Inside Sales initiatives given our reliance on Adobe AEM.
+We struggle with finding ways to move faster and get more effective attention from DR, especially with legal, finance and development.
+Enhance functionality
+enhance the platform bring it up to the year 2010 at least…
+A dedicated customer service team, a more robust way to track operational deliverables and milestones (like already discussed), thought leadership in e-commerce and checkout/payment functionality to improve conversion.
+
+roadmap communication
+I feel like some of the teams we work with at DR are stretched really thin. With additional resources, I think turnaround times could be shorter and programs could grow at a more aggressive pace.
+Development efforts and getting changes implemented to our platform seem to take too long and have been turned over to us with remaining issues that then need to go back for further development and QA.  There is often mis-communication early on of the specific requirements of the work needed.
+Faster implementation and better project management.
+Make more effort to understand our business model, priorities and culture.
+Improve interlock with customer  More stable and responsible account management
+Allow more freedom around front end code changes). Expose some of the business logic around fraud to clients to allow management of rulesets. 
+Response rate/faster turnaround (project management and execution)
+More flexibility with basic functionality including promo codes, commerce flow and more. Before our new site launched, there should have been an in-depth UX review to set it up for a good user experience.  Instead, we launched a clearly suboptimal site and are now having to dedicate resources to streamline it. Out of the gates it should have been much better.
+I think having more technical expertise in Kirkland would be really helpful. 
+More frequent upgrade of features and free upgrade, free customization as this is beneficial for all to grow    Share or fund marketing efforts of clients to grow together
+Make region and payment option expansion easier. 
+Resonse at times can be slower than would expect
+Make it more customizable from our end instead of needing DR support to change things.
+Hire SmartChannel resources.  Build an actual functional tool.  Advance your platform much faster.  Monitor and support end-to-end across the solution.
+-
+Remove the obstacles. Notably - come up with a business model that doesn't require you to always process the payment to the customer.
+..
+Consider brand guidelines more regularly.
+sometimes biznav can be a bit sluggish on a Monday...
+A strong control of issues with clear commitment and execution
+Reporting and  faster bug fixing
+Listen to your clients' needs in order to recommend the right solution.
+Improve EU Warehouse functionality
+
+better communication of platform updates and features on the roadmap. Quarterly newsletters should go to all clients explaining whats being worked on, how are features prioritized and abilty to deliver on time.
+to develop different implementations and be more open to easy amendments
+
+Provide a proactive set of e-commerce best practices at the beginning and throughout projects
+better response time, clear deadlines
+
+
+The ability to be agile, flexible and first moving on UX needs to be improved first
+Local account manager
+Need increased speed to market for key features for physical goods
+Evolve, re-build the platform otherwise you will fail in 2 years
+I think the training for GC and GF could be better.
+More skilled account managers, speed up processes.
+Affiliate network team
+faster implementations of clients' requests
+
+The solution is mostly worldwide. but expansion to new markets has been slow. Updates to and new offerings to the platform have been slow as well.
+Continue to improve the roadmap and offerings in the growth areas so continued growth is acheived
+More pro-active opportunity identification to grow the business
+do QBR
+"Provide ""A Team"" service irrespective on how much revenue we bring in. Microsoft has a dedicated team that is made up of the top level talent in DR."
+fix issues from above
+client-side engagement to make sure the business is adequately covered w/ appropriate resources
+"More flexible cart design, tighter integration between MarketForce and client services teams. Clearer expectations of how to get more than ""break/fix"" changes made to the cart experience."
+Improvement of long period of QA processes
+Some features are not very logical (e.g. difference between guest and registered checkout and no way to share customer data between the two approaches), also adding more flexibility (e.g. dynamic candy rack) would help.
+
+faster response times
+Be less US driven
+*Responsiveness to new opportunities and problems  *Providing recommendations for new/modern/emerging methods of digital commerce
+- DR internal communication  - DR customer support phone service being provided to clients' customers
+DR needs to improve it's response time on following areas    1. Day to day operational issues and response time to those issues based on priorities without any slippage.  2. Adaptability to changing the digital world and ever changing requirements on UX, coding, testing and keep changing when needed. Response time is the key to getting business benefits sooner than later.  
+Improve cache approach. 
+Really focus on customer management. It seems we are captive market. 
+nothing
+Need to continue to innovate in payments and integrations.
